@@ -1,6 +1,6 @@
 package burger_shop;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class HealthyBurger extends Burger {
     ArrayList<String> toppings = new ArrayList<String>();
@@ -35,3 +35,4 @@ public class HealthyBurger extends Burger {
         return totalPrice;
     }
 }
+*/

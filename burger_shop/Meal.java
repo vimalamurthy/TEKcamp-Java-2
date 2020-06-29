@@ -1,5 +1,4 @@
 package burger_shop;
-
 public class Meal extends Burger {
 
     String Drink;
@@ -7,21 +6,32 @@ public class Meal extends Burger {
     String Name;
     String BreadType;
     String Meat;
-    double BaseBurgerPrice;
+    Burger burgerorder;
+    // double BaseBurgerPrice;
 
-    public Meal(String name, String breadType, String meat, double baseBurgerPrice) {
-        super(breadType, meat);
-        //this.Name = name;
+    public Meal(String name, String breadType, String meat) {
+        super(name, breadType, meat);
+        this.Name = name;
         this.BreadType = breadType;
         this.Meat = meat;
-        //this.BaseBurgerPrice = baseBurgerPrice;
+        this.burgerorder  = new Burger(this.Name, this.BreadType, this.Meat);
+
+        //   this.BaseBurgerPrice = baseBurgerPrice;
 
     }
 
-   /* public Meal() {
+    public Meal() {
         super();
-    }*/
+    }
 
+    /* public void setBurger(Burger burger)
+     {
+         this.burger = burger;
+     } */
+    public Burger getBurger()
+    {
+        return this.burgerorder;
+    }
     public void setDrink(String drink)
     {
         this.Drink = drink;
@@ -52,8 +62,8 @@ public class Meal extends Burger {
     {
         return this.Meat;
     }
-    public double getBaseBurgerPrice()
+    /*public double getBaseBurgerPrice()
     {
         return this.BaseBurgerPrice;
-    }
+    } */
 }
