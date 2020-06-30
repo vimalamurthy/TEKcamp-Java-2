@@ -19,9 +19,6 @@ public class DeluxeBurger extends Burger {
     String deluxeTopping6;
     double deluxeTopping6Price;
 
-    /*   public DeluxeBurger( String breadType, String meat) {
-           super("Deluxe", breadType, meat, 4.75);
-       } */
     public DeluxeBurger( String breadType, String meat) {
         super("Deluxe", breadType, meat);
     }

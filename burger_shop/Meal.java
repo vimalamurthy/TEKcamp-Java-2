@@ -7,7 +7,6 @@ public class Meal extends Burger {
     String BreadType;
     String Meat;
     Burger burgerorder;
-    // double BaseBurgerPrice;
 
     public Meal(String name, String breadType, String meat) {
         super(name, breadType, meat);
@@ -16,18 +15,8 @@ public class Meal extends Burger {
         this.Meat = meat;
         this.burgerorder  = new Burger(this.Name, this.BreadType, this.Meat);
 
-        //   this.BaseBurgerPrice = baseBurgerPrice;
-
     }
 
-    public Meal() {
-        super();
-    }
-
-    /* public void setBurger(Burger burger)
-     {
-         this.burger = burger;
-     } */
     public Burger getBurger()
     {
         return this.burgerorder;
@@ -62,8 +51,4 @@ public class Meal extends Burger {
     {
         return this.Meat;
     }
-    /*public double getBaseBurgerPrice()
-    {
-        return this.BaseBurgerPrice;
-    } */
 }

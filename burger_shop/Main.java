@@ -25,9 +25,6 @@ public class Main {
         int toppingsallowed = 0;
         int allowedToppings = 0;
 
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-
         OrderType();
 
         int orderchoice = 0 ;
@@ -47,7 +44,6 @@ public class Main {
                 System.out.println("Wrong Order Type");
             }
         }
-
 
         printOptions();
 
@@ -84,13 +80,11 @@ public class Main {
 
         BreadTypeOptions();
 
-
         while (bchoice)
         {
             System.out.println("Enter your Bread Type");
             breadchoice = scanner.nextInt();
             scanner.nextLine();
-
 
             if (breadchoice == 1 || breadchoice == 2 || breadchoice == 3 || breadchoice == 4)
             {
@@ -162,7 +156,7 @@ public class Main {
             }
             else
             {
-                System.out.println("wrong topping type");
+                System.out.println("Wrong topping type");
             }
         }
 
@@ -195,7 +189,7 @@ public class Main {
             }
             else
             {
-                System.out.println("wrong side type");
+                System.out.println("Wrong side type");
             }
         }
 
@@ -209,7 +203,6 @@ public class Main {
             {
                 dchoice = false;
                 //      System.out.println("You entered " + getSides(drinkchoice) + " Type" );
-
             }
             else
             {
@@ -233,7 +226,6 @@ public class Main {
                 ord.addSides(msides);
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
-
                 if (purchaseyesno.equalsIgnoreCase("y")) {
                     ord.purchaseOrder();
                 }else
@@ -241,10 +233,7 @@ public class Main {
                     schoice = false;
                     System.out.println("Order Cancelled "  );
                 }
-
-
             } else if (orderchoice == 2) {
-
                 Meal ml = new Meal(geBurgerType(burgerchoice), getBreadType(breadchoice), getMeatType(meatchoice));
                 ml.setDrink(getDrink(sidechoice));
                 ml.setSide(getSides(sidechoice));
@@ -252,7 +241,6 @@ public class Main {
                 ord1.addToppings(mtoppings);
                 ord1.addDrinks(getDrink(drinkchoice));
                 ord1.addSides(msides);
-
 
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
@@ -265,15 +253,10 @@ public class Main {
                     System.out.println("Order Cancelled "  );
                 }
             }
-
         }
 
         if (burgerchoice == 2)  /* Healthy Burger */
         {
-            // int toppingsallowed = 4;
-            /* Plain burger */
-            //      System.out.println ("Inside Healthy Burger");
-
             Bread bread = new Bread();
             bread.setBread(getBreadType(breadchoice));
 
@@ -287,7 +270,6 @@ public class Main {
                 ord.addDrinks(getDrink(drinkchoice));
                 ord.addSides(msides);
 
-
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
 
@@ -307,7 +289,6 @@ public class Main {
                 ord1.addToppings(mtoppings);
                 ord1.addDrinks(getDrink(drinkchoice));
                 ord1.addSides(msides);
-
 
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
@@ -324,9 +305,6 @@ public class Main {
 
         if (burgerchoice == 3)  /* Delux Burger */
         {
-            //   int toppingsallowed = 6;
-
-
             Bread bread = new Bread();
             bread.setBread(getBreadType(breadchoice));
 
@@ -340,7 +318,6 @@ public class Main {
                 ord.addDrinks(getDrink(drinkchoice));
                 ord.addSides(msides);
 
-
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
 
@@ -351,8 +328,6 @@ public class Main {
                     schoice = false;
                     System.out.println("Order Cancelled "  );
                 }
-
-
             } else if (orderchoice == 2) {
 
                 Meal ml = new Meal(geBurgerType(burgerchoice), getBreadType(breadchoice), getMeatType(meatchoice));
@@ -362,7 +337,6 @@ public class Main {
                 ord1.addToppings(mtoppings);
                 ord1.addDrinks(getDrink(drinkchoice));
                 ord1.addSides(msides);
-
 
                 System.out.println("Purchase order (y/n) ");
                 purchaseyesno = scanner.nextLine();
@@ -374,15 +348,8 @@ public class Main {
                     schoice = false;
                     System.out.println("Order Cancelled "  );
                 }
-
-
             }
-
-
-
         }
-
-
     }
     static void printOptions(){
         System.out.println(" Options \n" +
@@ -398,14 +365,12 @@ public class Main {
                 "3. Chicken Fingers, $2.10 \n");
     }
 
-
     static void drinkOptions(){
         System.out.println(" Drinks \n" +
                 "1. Coke, $1.00 \n" +
                 "2. Pepsi, $1.00 \n"+
                 "3. Lemonade, $0.80 \n");
     }
-
 
     static void ToppingsOptions(int choice){
         if (choice != 2)
@@ -434,7 +399,6 @@ public class Main {
                     "7. Mustard, $0.90 \n"
             );
         }
-
     }
 
     static void MeatOptions(){
@@ -564,8 +528,6 @@ public class Main {
                 // code block
         }
         return  retTopping;
-
-
     }
 
     static String geBurgerType(int choice)
@@ -604,8 +566,6 @@ public class Main {
             case 3:
                 retSidesType = "Chicken Fingers";
                 break;
-            default:
-                // code block
         }
         return  retSidesType;
     }
@@ -625,8 +585,6 @@ public class Main {
             case 3:
                 retDrinkType = "Lemonade";
                 break;
-            default:
-                // code block
         }
         return  retDrinkType;
     }

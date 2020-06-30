@@ -38,15 +38,11 @@ public class Order {
     }
     void addToppings(String ... toppings)
     {
-
         {
-
             for (String topping : toppings) {
-
                 toppinglist = topping.split(",");
             }
             for (int i = 0; i < toppinglist.length; i++) {
-
                 switch(toppinglist[i])
                 {
                     case "Tomato":
@@ -73,25 +69,18 @@ public class Order {
                     case "Bacon":
                         toppingprice = toppingprice + 1.00;
                         break;
-                    default:
-                        // code block
                 }
             }
-
-            //  System.out.println("Total Price for Toppings " + toppingprice);
         }
     }
 
     void addSides(String ... sides)
     {
-
         {
-            //  System.out.println("Number of arguments is: "+ sides.length);
             for (String side : sides) {
                 sidelist = side.split(",");
             }
             for (int i = 0; i < sidelist.length; i++) {
-
                 switch(sidelist[i])
                 {
                     case "French Fries":
@@ -103,16 +92,11 @@ public class Order {
                     case "Chicken Fingers":
                         sideprice = sideprice + 2.10;
                         break;
-                    default:
-                        // code block
                 }
             }
 
         }
-        //  System.out.println("Total Price for sides " + sideprice);
-
     }
-
 
     void addDrinks(String ... drinks)
     {
@@ -129,10 +113,7 @@ public class Order {
                 case "Lemonade":
                     drinkprice = drinkprice + 2.10;
                     break;
-                default:
-                    // code block
             }
-            //   System.out.println("Total Price for drink " + drinkprice);
         }
     }
 

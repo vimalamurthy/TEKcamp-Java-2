@@ -1,38 +1,81 @@
 package burger_shop;
 
-/*import java.util.ArrayList;
+class HealthyBurger extends Burger {
+    String healthyTopping1=null;
+    double healthyTopping1Price;
 
-public class HealthyBurger extends Burger {
-    ArrayList<String> toppings = new ArrayList<String>();
-    String name = "Healthy Burger";
-    public HealthyBurger(String breadType) {
-        super( breadType, "lean meat");
+    String healthyTopping2;
+    double healthyTopping2Price;
+
+    String healthyTopping3;
+    double healthyTopping3Price;
+
+    String healthyTopping4;
+    double healthyTopping4Price;
+
+    public HealthyBurger(String breadType,String meat) {
+        super("Healthy Burger", breadType, meat);
+        // super("Healthy Burger", breadType, "lean meat", 5.59);
     }
 
-    ArrayList<String> addToppings(String topping){
-        if ((topping != null) && (toppings.size()<4)){
-            toppings.add(topping);
+    public void addHealthyTopping1(String topping, double price){
+        if ((topping == "Bacon") || (topping =="Cheese")){
+            System.out.println("Not a healthy choice");
         } else {
-            System.out.println("Cannot add "+topping + ". Only 4 toppings allowed ");
+            this.healthyTopping1 = topping;
+            this.healthyTopping1Price = price;
         }
-        return toppings;
+    }
+
+    public void addHealthyTopping2(String topping, double price){
+        if ((topping == "Bacon") || (topping =="Cheese")){
+            System.out.println("Please add healthy toppings");
+        } else {
+            this.healthyTopping2 = topping;
+            this.healthyTopping2Price = price;
+        }
+    }
+
+    public void addHealthyTopping3(String topping, double price){
+        if ((topping == "Bacon") || (topping =="Cheese")){
+            System.out.println("Please add healthy toppings");
+        } else {
+            this.healthyTopping3 = topping;
+            this.healthyTopping3Price = price;
+        }
+    }
+
+    public void addHealthyTopping4(String topping, double price){
+        if ((topping == "Bacon") || (topping =="Cheese")){
+            System.out.println("Please add healthy toppings");
+        } else {
+            this.healthyTopping4 = topping;
+            this.healthyTopping4Price = price;
+        }
     }
 
     @Override
-    public double totalBurgerPrice(){
-        double totalPrice = 5.50;
-        System.out.println("Base price of " +name +" is $" +totalPrice);
-        System.out.println("_________________________________________________________________");
-        if (toppings.size() > 0){
-            totalPrice += 0.65 * toppings.size();
+    public double totalBurgerPrice() {
+        double finalPrice = 5.59;
+        System.out.println("Base Cost of " +super.name +" is " +finalPrice);
+        if (this.healthyTopping1 != null){
+            finalPrice += healthyTopping1Price;
+            System.out.println("Added "+this.healthyTopping1 +" for an extra " +this.healthyTopping1Price);
         }
-        System.out.print("Toppings added : ");
-        for (String str : toppings){
-            System.out.print(str + ", ");
+        if (this.healthyTopping2 != null){
+            finalPrice += healthyTopping2Price;
+            System.out.println("Added "+this.healthyTopping2 +" for an extra " +this.healthyTopping2Price);
         }
-        System.out.println("The total Price of " +name + " with toppings is $" +totalPrice);
-        System.out.println("_________________________________________________________________");
-        return totalPrice;
+        if (this.healthyTopping3 != null){
+            finalPrice += healthyTopping3Price;
+            System.out.println("Added "+this.healthyTopping3 +" for an extra " +this.healthyTopping3Price);
+        }
+        if (this.healthyTopping4 != null){
+            finalPrice += healthyTopping4Price;
+            System.out.println("Added "+this.healthyTopping4 +" for an extra " +this.healthyTopping4Price);
+        }
+        System.out.println("The total Price " +name + " with added toppings is " +finalPrice);
+        System.out.println("_________________________________________________________");
+        return finalPrice;
     }
 }
-*/
