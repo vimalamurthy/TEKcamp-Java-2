@@ -1,5 +1,4 @@
 package burger_shop;
-
 public class DeluxeBurger extends Burger {
     String deluxeTopping1;
     double deluxeTopping1Price;

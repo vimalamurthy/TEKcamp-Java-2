@@ -1,12 +1,21 @@
 package burger_shop;
 public class Meal extends Burger {
 
-    String Drink;
-    String Side;
+    Drink drink = new Drink();
+    Side side = new Side();
     String Name;
     String BreadType;
     String Meat;
     Burger burgerorder;
+
+
+    public void setDrink(Drink drink) {
+        this.drink = drink;
+    }
+
+    public void setSide(Side side) {
+        this.side = side;
+    }
 
     public Meal(String name, String breadType, String meat) {
         super(name, breadType, meat);
@@ -17,27 +26,14 @@ public class Meal extends Burger {
 
     }
 
+    public Meal() {
+        super();
+    }
+
+
     public Burger getBurger()
     {
         return this.burgerorder;
-    }
-    public void setDrink(String drink)
-    {
-        this.Drink = drink;
-    }
-    public void setSide(String side)
-    {
-        this.Side = side;
-    }
-
-    public String getDrink()
-    {
-        return this.Drink;
-    }
-
-    public String getSide()
-    {
-        return this.Side;
     }
     public String getName()
     {
@@ -51,4 +47,5 @@ public class Meal extends Burger {
     {
         return this.Meat;
     }
+
 }

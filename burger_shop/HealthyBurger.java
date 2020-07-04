@@ -1,6 +1,7 @@
 package burger_shop;
+public class HealthyBurger extends Burger{
 
-class HealthyBurger extends Burger {
+
     String healthyTopping1=null;
     double healthyTopping1Price;
 
@@ -15,7 +16,6 @@ class HealthyBurger extends Burger {
 
     public HealthyBurger(String breadType,String meat) {
         super("Healthy Burger", breadType, meat);
-        // super("Healthy Burger", breadType, "lean meat", 5.59);
     }
 
     public void addHealthyTopping1(String topping, double price){
@@ -79,3 +79,4 @@ class HealthyBurger extends Burger {
         return finalPrice;
     }
 }
+
